@@ -1979,6 +1979,7 @@ li.int_login_sign p:hover {
     position: relative;
     box-shadow: 1px -1px 20px 0px rgb(0 0 0 / 30%);
     margin: 20px;
+    display: inline-block;
 }
 
 .int_project_gallery {
@@ -3495,7 +3496,6 @@ li.int_login_sign p:hover {
 .int_video_section_style2.int_dark_video_section,
 .int_video_section_style2.int_progresbar_wrapper {
     padding: 140px 0 280px;
-    
     background-image: url("../images/index/1920X626.png");
     background-size: cover;
     background-position: center center;
@@ -3878,7 +3878,7 @@ li.int_login_sign p:hover {
 /* Index v2 Footer css start */
 
 .int_footer_style2 {
-    background-image: url(https://via.placeholder.com/1920x570);
+    background-image: url("../images/index/1920X570.png");
     background-size: cover;
     background-position: center center;
     position: relative;
@@ -5529,10 +5529,7 @@ span.close_menu_int {
 }
 
 .int_about_page_title {
-    /*
-    background-image: url(https://via.placeholder.com/1920x135);
-    */
-    background-image: url("../images/index/header.png");
+    background-image: url("../images/index/1920X135.png");
     background-size: cover;
     background-position: bottom;
     padding: 70px 80px;
@@ -11744,28 +11741,142 @@ ul.comment_left {
 22. responsive end
 ********************************************************/
 
-@-webkit-keyframes fade-in-out {
-    0% {
-        letter-spacing: -0.5em;
-        filter: blur(12px) opacity(0%);
-    }
-    30% {
-        letter-spacing: 0;
-        filter: blur(0) opacity(1);
-    }
-    70% {
-        letter-spacing: 0;
-        filter: blur(0) opacity(1);
-    }
-    100% {
-        letter-spacing: -0.5em;
-        filter: blur(12px) opacity(0%);
+h1 {
+    animation: space 1.5s forwards ease-out;
+    animation-delay: 3.3s;
+}
+
+h1 span {
+    display: inline-block;
+    padding-right: 20px;
+}
+
+h4 {
+    margin-bottom: 5px;
+}
+
+h1.gold-text span:nth-child(1) {
+    animation: fall 1s forwards ease-out alternate;
+}
+
+h1.gold-text span:nth-child(2) {
+    animation: fall2 1.5s forwards ease-out alternate;
+}
+
+h1.gold-text span:nth-child(3) {
+    animation: fall3 2s forwards ease-out alternate;
+}
+
+h1.gold-text span:nth-child(4) {
+    animation: fall 2.3s forwards ease-out alternate;
+}
+
+h1.gold-text span:nth-child(5) {
+    animation: fall1 2.1s forwards ease-in alternate;
+}
+
+h4.gold-text:nth-child(2) {
+    animation: fall2 3.7s forwards ease-in-out alternate;
+}
+
+h4.gold-text:nth-child(3) {
+    animation: fall3 3.9s forwards ease-in-out alternate;
+}
+
+h4.gold-text:nth-child(4) {
+    animation: fall 4.2s forwards ease-in-out alternate;
+}
+
+@keyframes space {
+    to {
+        letter-spacing: -0.17em;
     }
 }
 
-.blurOut {
-    animation-name: fade-in-out;
-    animation-duration: 5s;
-    animation-delay: 2s;
-    animation-iteration-count: infinite;
+@keyframes fall {
+    0% {
+        transform: translateY(-50em);
+    }
+}
+
+@keyframes fall2 {
+    0% {
+        transform: translateX(-50em);
+    }
+}
+
+@keyframes fall3 {
+    0% {
+        transform: translateX(50em);
+    }
+}
+
+.ism-radio-label {
+    display: none!important;
+}
+
+@keyframes anim-lineUp {
+    0% {
+        opacity: 0;
+        transform: translateY(80%);
+    }
+    20% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes anim-lineLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(80%);
+    }
+    20% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.6;
+        transform: translateX(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes anim-lineRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-80%);
+    }
+    20% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.6;
+        transform: translateX(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.lineUp {
+    animation: 2s anim-lineUp ease-out;
+}
+
+.lineLeft {
+    animation: 5s anim-lineLeft ease-out;
+}
+
+.lineRight {
+    animation: 6s anim-lineRight ease-in;
 }

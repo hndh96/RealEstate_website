@@ -919,6 +919,30 @@ $(".submitForm").on('click', function() {
     }
 });
 
+function header_text_animation() {
+    $(".swiper_content_effect h1").attr("class", "gold-text");
+    $(".swiper_content_effect h4").attr("class", "gold-text");
+    setTimeout(function() {
+        $(".swiper_content_effect h1").attr("class", "");
+        $(".swiper_content_effect h4").attr("class", "");
+    }, 8000);
+}
+
 $(document).ready(function() {
-    setInterval(function() { $(".swiper-button-next").click(); }, 9000);
+    header_text_animation();
+
+    setInterval(function() {
+        $(".swiper-button-next").click();
+        header_text_animation();
+    }, 9000);
+
+    $(".swiper-button-next").click(function() {
+        $(".ism-button-next").click();
+        header_text_animation();
+    });
+
+    $(".swiper-button-prev").click(function() {
+        $(".ism-button-prev").click();
+        header_text_animation();
+    });
 });
