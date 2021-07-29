@@ -70,3 +70,6 @@ h4::before {
     font-weight: 600;
     opacity: 0.1;
 }
+.text-align-center{
+	align-items: center;
+}

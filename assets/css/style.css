@@ -5573,7 +5573,7 @@ span.close_menu_int {
 }
 
 .int_about_style2.int_about_section2 {
-    background: url("../images/aboutus/TrangDunlap1.jpg") no-repeat center left;
+    background: url("../images/aboutus/944X620.jpg") no-repeat center left;
 }
 
 .int_about_section2 .about_contentbox {
@@ -11742,8 +11742,10 @@ ul.comment_left {
 ********************************************************/
 
 h1 {
+    /*
     animation: space 1.5s forwards ease-out;
     animation-delay: 3.3s;
+    */
 }
 
 h1 span {
